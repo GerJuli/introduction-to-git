@@ -289,3 +289,13 @@ git checkout -- filename
 
 *Warning*: This is dangerous as you delete all changes that you made locally.
 Do NOT use this command unless you are absolutely sure what you are doing.
+
+# What this guide does not cover
+* Branching
+    - Creating branches
+    - Merging branches (and merge conflicts)
+    - Remote branches
+    - Tagging
+    - Forks
+* Usage of Github
+* Hooks
