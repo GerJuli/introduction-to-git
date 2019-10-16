@@ -158,6 +158,7 @@ Push this now to your repository.
 ## Show last changes
 `git log` shows you a log of recent commit messages.
 If you want to have a look at the changes source use `git log -p`
+A much prettier version is `git log --pretty=format:"%h - %an, %ar : %s" --graph`.
 
 
 ## Gitignore
