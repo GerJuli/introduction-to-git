@@ -286,6 +286,27 @@ You made changes to a file but the changes messed everything up?
 You can always go back to the version of the last commit by 
 ```bash
 git checkout -- filename
+
+```
+*Warning*: This is dangerous as you delete all changes that you made locally.
+Do NOT use this command unless you are absolutely sure what you are doing.
+
+## Time machine
+Something went terribly wrong. When using git this is no problem.
+Just use `reflog` and select the commit where still everything was alright.
+```bash
+$ git reflog
+9bff138 HEAD@{0}: commit: Document limitations of this guide
+8d9dac8 HEAD@{1}: commit (amend): Adjust script to nice print
+[...]
+2b66f53 HEAD@{7}: commit: Introduce git log
+8835c33 HEAD@{8}: commit: Fix of formating of headings
+2f0f500 HEAD@{9}: commit: Improve order of comments on workflow
+249dc14 HEAD@{10}: commit (amend): Explain git diff
+f5ba1d3 HEAD@{11}: commit: Explain git diff
+0a2ce1c HEAD@{12}: commit: Remove trailing whitspaces
+735511f HEAD@{13}: commit (initial): Initial commit
+git reset HEAD@{index_where_everything_was_fine}
 ```
 
 *Warning*: This is dangerous as you delete all changes that you made locally.
