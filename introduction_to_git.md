@@ -1,13 +1,17 @@
 # Installation
 
 # Configuration
+
+## Basics
 `$ git config --global user.name "John Doe"`
 `$ git config --global user.email johndoe@example.com`
 Run these commands without --global to apply changes only for local repository.
 
-Change from default editor by executing `$ git config --global core.editor emacs`
+## Advanced
 
-Check the configuration by `$ git config --list`
+* Change from default editor by executing `$ git config --global core.editor emacs`
+* Create aliases by: `git config --global alias.unstage 'reset HEAD --'`
+* Check the configuration by `$ git config --list`
 
 # Getting started
 
