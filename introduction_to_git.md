@@ -131,6 +131,7 @@ Changes to be committed:
 Now commit this change with a suitable commit message.
 Push this now to your repository.
 
+If you now change this file you can run `git diff` which will show you the changes that where made.
 
 ## Gitignore
 Sometimes you do not want git to track every file in your repository.
