@@ -1,20 +1,27 @@
 # Installation
 
+* On Windows: Download git here: https://git-scm.com/download/win and install it
+* On Linux: execute 'sudo apt install git' in the terminal
+
 # Configuration
 
 ## Basics
-`$ git config --global user.name "John Doe"`
-`$ git config --global user.email johndoe@example.com`
+
+```bash
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+
 Run these commands without --global to apply changes only for local repository.
 
 ## Advanced
 
-* Change from default editor by executing `$ git config --global core.editor emacs`
+* Change from default editor by executing  `$ git config --global core.editor vim`
 * Create aliases by: 
-    - `git config --global alias.unstage 'reset HEAD --'`
+    - `git config --global alias.unstage 'reset HEAD --'`:
     Introduces new command unstage
 
-    - `git config --global alias.hist 'log --pretty=format:"%h - %an, %ar : %s" --graph'`
+    - `git config --global alias.hist 'log --pretty=format:"%h - %an, %ar : %s" --graph'`:
     Is an pretty alternative to git log.
 
 * Check the configuration by `$ git config --list`
@@ -23,14 +30,28 @@ Run these commands without --global to apply changes only for local repository.
 
 ## Create an directory
 Select an directory of your choice e.g. ~/Desktop/git-training/, 
-open the terminal there and type `git init`.
+open the terminal there and type 
+
+```bash
+$ git init
+```
 Congratulations you have your first git repository!
 
 ## Committing files
-Create some text files e.g. `hallo.txt` or  `hello\_world.py`.
-To start version-controlling them add the file to git by using the command `git add filename`.
-You can also add multiple files. E.g. you want to add all text files the do `git add *.txt`
-Now we can commit these changes by typing `git commit`. This will open your preferred text editor
+Create some text files e.g. `hallo.txt` or  `hello_world.py`.
+To start version-controlling them add the file to git by using the command 
+```bash
+$ git add filename
+```
+You can also add multiple files. E.g. you want to add all text files the do 
+```bash
+$ git add *.txt
+```
+Now we can commit these changes by typing 
+```bash
+$ git commit
+```
+This will open your preferred text editor
 where you can type in a commit message.
 
 ### Commit messages
@@ -50,11 +71,17 @@ They to some extend replace your labbook in its function.
 
 #### Good commit messages
 
-1. Short commit message
-"Fix typo in introduction to user guide"
-for short commits it is easier to use `git commit -m "Commit message"`
+For short commits that need only few explanation it is convenient to use 
+```bash
+$ git commit -m "Fix typo in introduction to user guide"
+```
 
-2. Long commit message
+For long commit message you use 
+```bash
+$ git commit 
+```
+which opens a text editor and lets you describe your changes in detail. Do not forget the line
+between header and body of the commit message.
 
 ```
 Summarize changes in around 50 characters or less
@@ -83,20 +110,26 @@ Further paragraphs come after blank lines.
 
 #### Hall of shame
 
-* “bug fix”, "more work”, “minor changes”
+* “bug fix”, "more work”, “minor changes”:
 Bad because it contains no useful information
 
-* “Change X constant to be 10”
+* “Change X constant to be 10”:
 Bad as it does not tell why. What was changed is easy to find out by
   git diff.
 
-* “super long commit message goes here, something like 100 words and lots of characters woohoo!”
+* “super long commit message goes here, something like 100 words and lots of characters woohoo!”:
 Bad because it is unreadable.
 
 ## Storing changes on remote server
 To store changes on a remote server e.g. Github you need to push your repository there.
 If you are doing this for the first time you first need to define where to push your repository to.
-Use `git remote add origin https://github.com/GerJuli/introduction-to-git.git` The URL can be
+Use 
+
+```bash
+$ git remote add origin https://github.com/GerJuli/introduction-to-git.git
+```
+
+The URL can be
 replaced with any URL that points to an existing repository. This can even be a USB drive!
 Now push by using `git push -u origin master`. With this command you created an upstream to your
 remote 'origin' where you branch 'master' will be pushed.
@@ -104,16 +137,23 @@ As this is set up you can use `git push` from now on.
 
 # Cloning existing repositories
 Downloading existing repositories is called 'cloning'. You can do this by using
-`https://github.com/GerJuli/introduction-to-git.git`.
+```bash
+$ git clone https://github.com/GerJuli/introduction-to-git.git
+```
 That is it. Now you can start working on it.
 
 # Workflow
 
 ## Check status
-With 'git status' you can check the status of your current directory.
+With 
+```bash
+$ git status
+``` 
+you can check the status of your current directory.
 This will look like this:
 
 ```bash
+$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
@@ -135,10 +175,24 @@ Untracked files:
       nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-You can also run `git diff` which will show you the changes that where made.
+You can also run
 
-Now track the file by adding it to the staging area via `git add README`
-If you want to commit only a part of the changes you made use `git add -p`
+```bash
+$ git diff
+``` 
+
+which will show you the changes that where made.
+
+Now track the file by adding it to the staging area via 
+
+``` bash
+$ git add README
+```
+
+If you want to commit only a part of the changes you made use 
+```bash
+git add -p
+```
 git will ask you for every "hunk"(part of the file) if you want to add it to the staging area.
 The main options are:
 
@@ -158,17 +212,36 @@ Changes to be committed:
 
       new file:   README
 ```
+
 Now commit this change with a suitable commit message.
 You forgot what you changed and `git diff` does not work?
-If you already added the file to the staging area you can run `git diff --staged`.
+If you already added the file to the staging area you can run 
+```bash
+$ git diff --staged
+```
 
 ## Push to remote
-Push this now to your repository.
+Push this now to your repository with
+
+```bash
+$ git push
+```
 
 ## Show last changes
-`git log` shows you a log of recent commit messages.
-If you want to have a look at the changes source use `git log -p`
-A much prettier version is `git log --pretty=format:"%h - %an, %ar : %s" --graph`.
+
+```bash
+$ git log
+``` 
+shows you a log of recent commit messages.
+
+If you want to have a look at the changes source use
+```bash
+$ git log -p
+```
+A much prettier version is 
+```bash
+$ git log --pretty=format:"%h - %an, %ar : %s" --graph
+```
 
 
 ## Gitignore
@@ -177,7 +250,7 @@ Typically this applies for log files, configuration files (where maybe passwords
 and compiled sources. For this purpose you can create the file  `.gitignore` in your repository.
 This file will be read by git. An example `.gitignore` looks like this:
 
-```
+```gitignore
 # ignore all .log files
 *.log
 
@@ -193,15 +266,15 @@ build/
 # ignore all files in any directory named build
 build/
 ```
-You can generate gitignore files ![here](https://www.gitignore.io/).
+You can generate gitignore files [here](https://www.gitignore.io/).
 
 # Undoing things
 
 ## Make changes to the last commit
 You forgot to add one file to your commit?
 You are unhappy with your commit message?
-Just use `git commit --amend`
-```
+Use `git --amend`!
+```bash
 $ git commit -m 'Pretty commit message'
 $ git add forgotten_file
 $ git commit --amend
@@ -209,7 +282,10 @@ $ git commit --amend
 
 ## Unmodifying a Modified File
 You made changes to a file but the changes messed everything up?
-You can always go back to the version of the last commit by `git checkout -- filename`
+You can always go back to the version of the last commit by 
+```bash
+git checkout -- filename
+```
 
 *Warning*: This is dangerous as you delete all changes that you made locally.
 Do NOT use this command unless you are absolutely sure what you are doing.
