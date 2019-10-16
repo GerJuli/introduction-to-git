@@ -279,6 +279,7 @@ $ git commit -m 'Pretty commit message'
 $ git add forgotten_file
 $ git commit --amend
 ```
+Do not do this if you already pushed to remote.
 
 ## Unmodifying a Modified File
 You made changes to a file but the changes messed everything up?
