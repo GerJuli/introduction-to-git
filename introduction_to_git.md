@@ -188,3 +188,22 @@ build/
 build/
 ```
 You can generate gitignore files ![here](https://www.gitignore.io/).
+
+# Undoing things
+
+## Make changes to the last commit
+You forgot to add one file to your commit?
+You are unhappy with your commit message?
+Just use `git commit --amend`
+```
+$ git commit -m 'Pretty commit message'
+$ git add forgotten_file
+$ git commit --amend
+```
+
+## Unmodifying a Modified File
+You made changes to a file but the changes messed everything up?
+You can always go back to the version of the last commit by `git checkout -- filename`
+
+*Warning*: This is dangerous as you delete all changes that you made locally.
+Do NOT use this command unless you are absolutely sure what you are doing.
