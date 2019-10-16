@@ -294,6 +294,7 @@ Do NOT use this command unless you are absolutely sure what you are doing.
 ## Time machine
 Something went terribly wrong. When using git this is no problem.
 Just use `reflog` and select the commit where still everything was alright.
+
 ```bash
 $ git reflog
 9bff138 HEAD@{0}: commit: Document limitations of this guide
@@ -313,6 +314,7 @@ git reset HEAD@{index_where_everything_was_fine}
 Do NOT use this command unless you are absolutely sure what you are doing.
 
 # What this guide does not cover
+
 * Branching
     - Creating branches
     - Merging branches (and merge conflicts)
@@ -321,3 +323,8 @@ Do NOT use this command unless you are absolutely sure what you are doing.
     - Forks
 * Usage of Github
 * Hooks
+
+# Further reading
+
+* Offical git website [Git SCM](https://git-scm.com/): Extensiv documentation
+* [Oh shit Git](https://ohshitgit.com/): Help when you messed up.
