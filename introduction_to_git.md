@@ -10,7 +10,13 @@ Run these commands without --global to apply changes only for local repository.
 ## Advanced
 
 * Change from default editor by executing `$ git config --global core.editor emacs`
-* Create aliases by: `git config --global alias.unstage 'reset HEAD --'`
+* Create aliases by: 
+    - `git config --global alias.unstage 'reset HEAD --'`
+    Introduces new command unstage
+
+    - `git config --global alias.hist 'log --pretty=format:"%h - %an, %ar : %s" --graph'`
+    Is an pretty alternative to git log.
+
 * Check the configuration by `$ git config --list`
 
 # Getting started
