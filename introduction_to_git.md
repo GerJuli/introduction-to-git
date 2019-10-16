@@ -27,12 +27,12 @@ where you can type in a commit message.
 *Commit messages are important*
 
 Why are the so important? Because it is much easier to track bugs with it,
-they describe the process of development, make it easier for others to work 
+they describe the process of development, make it easier for others to work
 with your code (e.g. code review) and will help you in two years to understand what you did.
 They to some extend replace your labbook in its function.
 
 #### How to write commit messages
-* Use present tense and use imperative 
+* Use present tense and use imperative
 * Tell why you did changes.
 * Limit yourself to 50 characters in the first line.
 * Wrap the body at 72 characters
