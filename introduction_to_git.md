@@ -22,6 +22,7 @@ To start version-controlling them add the file to git by using the command `git 
 You can also add multiple files. E.g. you want to add all text files the do `git add *.txt`
 Now we can commit these changes by typing `git commit`. This will open your preferred text editor
 where you can type in a commit message.
+
 ### Commit messages
 
 *Commit messages are important*
@@ -135,7 +136,7 @@ The main options are:
 * n do not stage this hunk for the next commit
 * q quit; do not stage this hunk or any of the remaining hunks
 
-# Committing
+## Committing
 The changes are now ready to be committed
 
 ``` bash
