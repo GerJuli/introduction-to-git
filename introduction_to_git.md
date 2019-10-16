@@ -73,7 +73,7 @@ Further paragraphs come after blank lines.
 #### Hall of shame
 
 * “bug fix”, "more work”, “minor changes”
-Bad  because it contains no useful information
+Bad because it contains no useful information
 
 * “Change X constant to be 10”
 Bad as it does not tell why. What was changed is easy to find out by
@@ -102,24 +102,43 @@ That is it. Now you can start working on it.
 With 'git status' you can check the status of your current directory.
 This will look like this:
 
-```
+```bash
 On branch master
 Your branch is up-to-date with 'origin/master'.
 nothing to commit, working directory clean
 ```
 
+## Add file
 If you now add a file to the repository e.g. README then the status changes.
 
-```
+``` bash
+$ echo 'My Project' > README
+$ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
-nothing to commit, working directory clean
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+      README
+
+      nothing added to commit but untracked files present (use "git add" to track)
 ```
 
+You can also run `git diff` which will show you the changes that where made.
 
-Now track the file by adding it to the staging area.
-It is now ready to be committed
-```
+Now track the file by adding it to the staging area via `git add README`
+If you want to commit only a part of the changes you made use `git add -p`
+git will ask you for every "hunk"(part of the file) if you want to add it to the staging area.
+The main options are:
+
+* y stage this hunk for the next commit
+* n do not stage this hunk for the next commit
+* q quit; do not stage this hunk or any of the remaining hunks
+
+# Committing
+The changes are now ready to be committed
+
+``` bash
 $ git status
 On branch master
 Your branch is up-to-date with 'origin/master'.
@@ -129,9 +148,12 @@ Changes to be committed:
       new file:   README
 ```
 Now commit this change with a suitable commit message.
+You forgot what you changed and `git diff` does not work?
+If you already added the file to the staging area you can run `git diff --staged`.
+
+## Push to remote
 Push this now to your repository.
 
-If you now change this file you can run `git diff` which will show you the changes that where made.
 
 ## Gitignore
 Sometimes you do not want git to track every file in your repository.
