@@ -155,6 +155,10 @@ If you already added the file to the staging area you can run `git diff --staged
 ## Push to remote
 Push this now to your repository.
 
+## Show last changes
+`git log` shows you a log of recent commit messages.
+If you want to have a look at the changes source use `git log -p`
+
 
 ## Gitignore
 Sometimes you do not want git to track every file in your repository.
