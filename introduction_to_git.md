@@ -1,3 +1,13 @@
+---
+title: Introduction to git
+author: Julian-Samuel Gebühr
+date: 22. October 2019
+geometry: margin=2cm
+...
+
+
+
+
 # Installation
 
 * On Windows: Download git here: https://git-scm.com/download/win and install it
