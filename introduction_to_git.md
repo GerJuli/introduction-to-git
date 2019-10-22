@@ -244,6 +244,23 @@ A much prettier version is
 $ git log --pretty=format:"%h - %an, %ar : %s" --graph
 ```
 
+# Get latest changes
+An amazing thing of git is to work together with others. This guide will not go into the details
+of this, yet you will often have to get the latest changes of a project.
+
+You can do this easily by using
+```bash
+$ git pull
+```
+which is a short version of two different commands. It first executes `git fetch` that downloads
+the latest changes. Then it runs `git merge FETCH_HEAD` which tries to apply the newest changes
+to your local repository. This is also the difficulty of this as any file that was changed locally
+and in the remote repository will cause a *merge conflict* as git does not know which file/parts
+of the file to keep. The resolution of such a conflict can be complicated and goes beyond the
+intentions of this guide.
+
+A brief overview can be found
+[here](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line).
 
 ## Gitignore
 Sometimes you do not want git to track every file in your repository.
