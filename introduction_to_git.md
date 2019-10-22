@@ -345,15 +345,20 @@ on your operating system. You named the remote "usb" here, of course you can cha
 
 Now push your repo
 ```bash
-$ git push -u usb master
+$ git push usb
 ```
-After pushing for the first time you can drop the `-u` flag in this command.
 
 To list all repositories just type
 ```bash
 $ git remote
 origin
 usb
+```
+
+If you want to push to the USB drive by default you can use
+```bash
+$ git push -u usb master
+Branch 'master' set up to track remote branch 'master' from 'usb'
 ```
 
 # What this guide does not cover
