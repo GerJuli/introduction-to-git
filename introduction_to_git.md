@@ -316,11 +316,11 @@ Do NOT use this command unless you are absolutely sure what you are doing.
 
 # USB sticks as remote
 Sometimes (e.g. you are working on a machine that is not connected to the internet) it can be
-helpful to use an USB drive as remote. 
+helpful to use an USB drive as remote.
 
 ## How to prepare the drive
 
-Go to the USB drive 
+Go to the USB drive
 ```bash
 $ cd /media/username/git-stick/
 ```
@@ -369,5 +369,5 @@ usb
 
 # Further reading
 
-* Offical git website [Git SCM](https://git-scm.com/): Extensiv documentation
+* Official git website [Git SCM](https://git-scm.com/): Extensiv documentation
 * [Oh shit Git](https://ohshitgit.com/): Help when you messed up.
