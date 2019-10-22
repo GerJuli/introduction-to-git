@@ -325,7 +325,9 @@ $ git reflog
 f5ba1d3 HEAD@{11}: commit: Explain git diff
 0a2ce1c HEAD@{12}: commit: Remove trailing whitspaces
 735511f HEAD@{13}: commit (initial): Initial commit
-git reset HEAD@{index_where_everything_was_fine}
+
+$ git reset HEAD@{index_where_everything_was_fine}
+$ git reset --hard origin/master
 ```
 
 *Warning*: This is dangerous as you delete all changes that you made locally.
