@@ -1,4 +1,5 @@
 # Introduction to git
+A very limited introduction to the usage of git
 
 ## Creating PDFs from source
 Everything in this repo is written in markdown. If you want to have a PDF (which you can print
