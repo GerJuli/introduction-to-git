@@ -109,6 +109,7 @@ Further paragraphs come after blank lines.
 ```
 
 #### Hall of shame
+Here you see some examples of bad commit messages.
 
 * “bug fix”, "more work”, “minor changes”:
 Bad because it contains no useful information
@@ -312,6 +313,48 @@ git reset HEAD@{index_where_everything_was_fine}
 
 *Warning*: This is dangerous as you delete all changes that you made locally.
 Do NOT use this command unless you are absolutely sure what you are doing.
+
+# USB sticks as remote
+Sometimes (e.g. you are working on a machine that is not connected to the internet) it can be
+helpful to use an USB drive as remote. 
+
+## How to prepare the drive
+
+Go to the USB drive 
+```bash
+$ cd /media/username/git-stick/
+```
+Create a directory for your repository
+```bash
+$ mkdir my-repo
+```
+Initialize the repo
+```bash
+$ cd my-repo
+$ git init --bare
+```
+
+## How to push to a USB drive
+
+To push to a USB drive you need to add a remote. Go to your local repository and use
+```bash
+$ git remote add usb /media/username/git-stick/my-repo/
+```
+Be aware that your stick will have a different name and will be at a different location, depending
+on your operating system. You named the remote "usb" here, of course you can change that name.
+
+Now push your repo
+```bash
+$ git push -u usb master
+```
+After pushing for the first time you can drop the `-u` flag in this command.
+
+To list all repositories just type
+```bash
+$ git remote
+origin
+usb
+```
 
 # What this guide does not cover
 
